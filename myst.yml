@@ -1,0 +1,18 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: c8ff42b8-4f33-4147-aacd-f51d4b1ed022
+  # title:
+  # description:
+  # keywords: []
+  # authors: []
+  # github: https://github.com/mk-umcs/programowanie-funkcyjne
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  toc:
+    - file: index.md
+site:
+  template: book-theme
+  options:
+    logo_text: Programowanie funkcyjne
+  #   favicon: favicon.ico
+  #   logo: site_logo.png
