@@ -10,6 +10,11 @@ project:
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
   toc:
     - file: index.md
+    - title: Zadania
+      children:
+        - file: zadania/zestaw-01/zestaw-01.md
+  static_files:
+    - zadania/zestaw-01/zestaw-01
 site:
   template: book-theme
   options:
