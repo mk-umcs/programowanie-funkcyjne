@@ -1,7 +1,8 @@
 # Typy i wyrażenia logiczne, podstawowe konstrukcje
 
-* Typy i wyrażenia logiczne
+## Do przejrzenia przed laboratoriami:
 
+* Typy i wyrażenia logiczne ([Wikibooks](https://en.wikibooks.org/wiki/Haskell/Truth_values))
 * Wyrażenie `if-then-else`, wyrażenie `let-in`, np.
 
     ```haskell
@@ -14,7 +15,6 @@
                 if delta == 0 then 1
                 else 2
     ```
-
 * Definicja funkcji z prostym dopasowaniem wzorców, np.
     ```haskell
     f 0     = 0
@@ -27,7 +27,6 @@
     point_position 0 _ = "punkt na osi OY"
     point_position _ _ = "punkt poza osiami układu"
     ```
-
 * Użycie &bdquo;strażników&rdquo; (ang. *guards*) w definicji funkcji, np.
     ```haskell
     sign x
@@ -56,7 +55,6 @@
     daysInMonth _ 11 = 30
     daysInMonth _ 12 = 31
     ```
-
 * Konstrukcja `where`, np.
     ```haskell
     numOfSolutions a b c
@@ -66,7 +64,6 @@
         where
             delta = b ^ 2 - 4 * a * c
     ```
-
 
 ## Pomocne materiały:
 * Typy i wyrażenia logiczne &mdash; [Haskell/Truth values &mdash; Wikibooks](https://en.wikibooks.org/wiki/Haskell/Truth_values)
