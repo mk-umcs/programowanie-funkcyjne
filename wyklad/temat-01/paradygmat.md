@@ -24,7 +24,7 @@
         return math.sqrt(a * a + b * b)
     ```
 
-    Wyrażenie `hypotenuse(3, 4)` będzie miało zawsze wartość `5`. Oznacza to m.in., że zastąpienie go w dowolnymi miejscu programu przez `5` nie zmieni znaczenia programu. Wyrażenie `hypotenuse(x, y)` możemy też zawsze zastąpić przez `math.sqrt(x * x + b * b)` bez zmiany znaczenia programu.
+    Wyrażenie `hypotenuse(3, 4)` będzie miało zawsze wartość `5`. Oznacza to m\.in., że zastąpienie go w dowolnymi miejscu programu przez `5` nie zmieni znaczenia programu. Wyrażenie `hypotenuse(x, y)` możemy też zawsze zastąpić przez `math.sqrt(x * x + b * b)` bez zmiany znaczenia programu.
 
     Wyrażenie `i++` nie jest przejrzyste referencyjnie.
 
@@ -36,34 +36,8 @@
 
 * Brak zmiany stanu (brak instrukcji podstawienia)
 
-    Konsekwencją braku zmiany stanu jest m.in. brak pętli jako konstrukcji programistycznej. Pętla nie ma sensu, bo bez zmiany stanu wartość warunku nigdy się nie zmieni.
+    Konsekwencją braku zmiany stanu jest m\.in. brak pętli jako konstrukcji programistycznej. Pętla nie ma sensu, bo bez zmiany stanu wartość warunku nigdy się nie zmieni.
 
 * Środkiem wyrazu algorytmów, które w językach imperatywnych wyrażane są za pomocą pętli jest **rekurencja**.
 
-    Kluczowa jest odpowiednia konstrukcja algorytmów rekurencyjnych w sposób, który nie powoduje zwiększonej złożoności pamięciowej (i w praktyce przepełnienia stosu programu), czyli **rekurencja ogonowa** (ang. *tail recursion*).
-
-## Rekurencja ogonowa
-
-Rekurencja ogonowa polega na tym, że wywołania rekurencyjne są **wywołaniami ogonowymi** (ang. *tail calls*). Wywołanie ogonowe, to sytuacja, gdy ostatnią operacją wykonywaną przez funkcję jest wywołanie innej funkcji (lub tej samej, w przypadku rekurencji). W języku funkcyjnym: wartość funkcji zostanie obliczona bezpośrednio jako wartość zwrócona przez wartość innej funkcji.
-
-Przykład:
-
-```haskell
-f1 x = g (x + 1)
-
-f2 x = 
-    if x < 0 then
-        f2 (x + 1)
-    else
-        1 - (g x)
-
-f3 x y = g (h x)
-```
-
-- W definicji `f1` wywołanie funkcji `g` jest ogonowe.
-- W definicji `f2` wywołanie `f2` jest ogonowe (rekurencja ogonowa), a wywołanie `g` nie jest (po jego zakończeniu musi być ).
-- W definicji `f3` wywołanie `g` jest ogonowe, a wywołanie `h` nie jest.
-- **Uwaga:** w definicji funkcji `f2` jest jeszcze jedno wywołanie ogonowe, jest to wywołanie funkcji `(-)`, czyli operatora odejmowania.
-
-Rekurencja ogonowa pozwala na wyrażenie w językach funkcyjnych algorytmów iteracyjnych.
-
+    Kluczowa jest odpowiednia konstrukcja algorytmów rekurencyjnych w sposób, który nie powoduje zwiększonej złożoności pamięciowej (i w praktyce przepełnienia stosu programu), czyli [**rekurencja ogonowa**](./rekurencja) (ang. *tail recursion*).
